@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title >你点我试试</title>
+	</head>
+	<body>
+		<!--点击事件  写到标签内部-->
+		<p id="paragraph0">点我</p>
+		<p id="paragraph1">点我</p>
+		<p id="paragraph2">点我</p>
+		<p id="paragraph3">点我</p>
+		<p id="paragraph4">点我</p>
+		<p id="paragraph5">点我</p>
+	</body>
+	<script type="text/javascript">
+//		第一步,要获取到你要添加点击事件的那个/那些标签
+//		获取元素
+
+//		document.getElementsByTagName("p")
+		
+//		给获取的元素添加点击事件
+
+//		document.getElementsByTagName("p")[0].onclick=function(){
+//			alert("我是点击出来的内容0");
+//		}
+//		document.getElementsByTagName("p")[1].onclick=function(){
+//			alert("我是点击出来的内容1");
+//		}
+//		document.getElementsByTagName("p")[2].onclick=function(){
+//			alert("我是点击出来的内容2");
+//		}
+//		document.getElementsByTagName("p")[3].onclick=function(){
+//			alert("我是点击出来的内容3");
+//		}
+//		document.getElementsByTagName("p")[4].onclick=function(){
+//			alert("我是点击出来的内容4");
+//		}
+		
+		
+		
+		//获取所有的p标签给一个变量
+//		通过标签名来获取元素,document.getElementsByTagName();
+//		var oP = document.getElementsByTagName("p");
+		
+//		给变量添加点击事件就相当于给获取的元素添加点击事件
+//		oP[0].onclick=function(){
+//			alert("我是点击出来的内容0");
+//		}
+//		oP[1].onclick=function(){
+//			alert("我是点击出来的内容1");
+//		}
+		
+		
+//		通过类名来获取元素
+		
+//		var oppo=document.getElementsByClassName("oppo");
+//		oppo[0].onclick=function(){
+//			alert("弹出内容0");
+//		}
+		
+//		通过id名来获取元素
+		var paragraph0=document.getElementById("paragraph0");
+//		console.log(paragraph0);
+		paragraph0.onclick=function(){
+			alert(0);
+		}
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

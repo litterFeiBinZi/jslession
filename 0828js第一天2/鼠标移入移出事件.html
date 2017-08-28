@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 100px;
+				height:100px;
+				background:yellowgreen;
+				visibility: hidden;
+				opacity: 0;
+				transition: all 2s;
+			}
+		</style>
+	</head>
+	<body>
+		<button>&lt;按钮&gt;</button>
+		<div></div>
+	</body>
+	<script type="text/javascript">
+		var oBtn=document.getElementsByTagName("button")[0];
+		var oDiv=document.getElementsByTagName("div")[0];
+
+		//鼠标移入事件
+		oBtn.onmouseover=function(){
+			oDiv.style.visibility="visible";
+			oDiv.style.opacity="1";	
+		}
+		//鼠标移出事件
+		oBtn.onmouseout=function(){
+			oDiv.style.visibility="hidden";
+			oDiv.style.opacity="0";	
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>
