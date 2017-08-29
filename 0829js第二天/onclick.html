@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<a href="http://www.baidu.com">百度</a>
+		<a href="###">rrr</a>
+		<button>按钮</button>
+	</body>
+	<script>
+		var author=document.getElementsByTagName("a")[0];
+		var oBtn=document.getElementsByTagName("button")[0];
+		oBtn.onclick=function(){
+			author.href="http://www.taobao.com";
+			author.href="http://www.jingdong.com";
+			author.innerHTML="淘宝";
+		}
+		
+	</script>
+</html>

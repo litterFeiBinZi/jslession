@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script>
+//		逻辑运算符分为三种分别是:  &&  ||  !
+		
+		
+//		&&  与     一假即假
+		var a = true;
+		var b = false;
+		var c = true;
+		console.log(a&&b&&c);
+		
+//		短路现象
+		var b = 0 && 5 && 444 && 9; // false
+//		alert(b);
+		
+		
+		var a = 1;
+		var b = --a && a++ && ++a && a-- && ++a && a++;
+//		alert(a);
+
+
+
+		
+//		||  或
+		var a = 1;
+		var b = 0;
+		var e = 90;
+		var c = a || b || e;
+//		alert(c);
+		
+//		短路现象, 一真即真
+
+		var a = 0;
+		var b = a++ || ++a || a-- || --a;
+		
+//		alert(a);
+//		alert(b);
+		
+		
+		var x=y=z=0;
+//		var x=0,y=0,z=0;
+		
+		
+		var answer = x++ || ++y || ++z;
+		
+		
+//		alert(answer);
+//		alert(x);      //1
+//		alert(y);		//1
+//		alert(z);       //1
+//		
+//		var o = 0 && 5 > 6 + 1 * 2 / 4 % 7; 
+// 		alert(o);
+//		var p = 1 || 5 > 6 + 1 * 2 / 4 % 7; 
+//		alert(p); 
+
+		
+		var b = !(5!="5" || "5"===5 && 5<4);
+		alert(b);
+		
+		
+		//非  !
+		
+//		var a = 0;
+//		var b = !a;
+//		alert(b);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>
