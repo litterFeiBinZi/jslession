@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>while</title>
+	</head>
+	<body>
+		
+	</body>
+	<script>
+		
+//		var i=1;//循环初始量
+//		while(/*循环判断条件*/){
+//			//循环语句
+//			
+//			i++;//循环增量
+//		}
+
+//		var i=100;
+//		while(i>10){
+//			console.log(i);
+//			i--;
+//		}
+		
+//		var i=1;
+//		while(i<=10){
+//			if(i==6){
+////				console.log(i);
+//			}
+//			i++;
+//		}
+		
+		
+		
+		//1~100之间7的倍数
+		//1~100之间个位是7
+		//1~100之间十位是7
+		
+//		var i=1;
+//		while(i<=100){
+//			
+//			if(parseInt(i/10)==7){
+////				console.log(i);
+//			}
+//			
+//			i++;
+//		}
+		
+		//用while打印出1~100之间的不是7的倍数并且不包含7的数
+		
+		
+//打印出所有的 "水仙花数 "，所谓 "水仙花数 "是指一个三位数，其各位数字立方和等于该数本身。
+//
+//　		例如：153是一个 "水仙花数 "，因为153=1的三次方＋5的三次方＋3的三次方。
+//	var i=100;
+//	while(i<1000){
+//		
+//		var a=parseInt(i/100);//百位
+//		var b=parseInt((i%100)/10);//十位
+//		var c=i%10;//个位
+//		
+//		if(a*a*a+b*b*b+c*c*c==i){
+//			console.log(i);
+//		}
+//		i++;
+//	}
+		
+//		i+"*"+i+"="+i*i;
+		
+//	var i=1;
+//	while(i<=9){
+//		document.write(i);
+//		document.write("<br/>");
+//		i++;
+//	}
+	
+//	有这么一道题,说公鸡5元一只,母鸡3元一只,小鸡1元买三只,我现在有100元钱要买100只鸡,问怎么买?
+	
+//	x--20
+//	y--33
+//	z--100
+	
+	var x=0;
+	while(x<=20){
+		var y=0;
+		while(y<=33){
+			var z=0;
+			while(z<=100){
+				if((5*x+3*y+z/3==100)&&(x+y+z==100)){
+					document.write("公鸡："+x);
+					document.write("母鸡："+y);
+					document.write("小鸡："+z);
+				}
+				
+				z++;
+			}
+			y++;
+		
+		}	
+		document.write("<br/>");
+		x++;
+	}
+	
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

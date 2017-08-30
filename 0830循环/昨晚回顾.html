@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				background: yellowgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<button>显示/隐藏</button>
+		<div></div>
+	</body>
+	<script type="text/javascript">
+		
+//		第一步:获取元素
+		var oBtn=document.getElementsByTagName("button")[0];
+		var oDiv=document.getElementsByTagName("div")[0];
+		
+//		var a=1;
+//		oBtn.onclick=function(){
+//			a++;
+//			if(a%2==0){
+//				oDiv.style.display="none";
+//			}else{
+//				oDiv.style.display="block";
+//			}
+//			console.log(a);
+//			
+//		}
+
+
+		var bool=true;
+		oBtn.onclick=function(){
+			if(bool){
+				oDiv.style.display="none";
+			}else{
+				oDiv.style.display="block";
+			}
+			bool=!bool;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>
