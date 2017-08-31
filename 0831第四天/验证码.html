@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button>点击获取验证码</button>
+		<p></p>
+		<input type="text" placeholder="请输入验证码"/>
+		<button>提交验证码验证</button>
+	</body>
+	<script>
+		var oBtn=document.getElementsByTagName("button");
+		var oP=document.getElementsByTagName("p")[0];
+		var oInp=document.getElementsByTagName("input")[0];
+		
+//		第一个按钮点击获取验证码
+		oBtn[0].onclick=function(){
+//			点击及获取随机数
+			var a =Math.floor(Math.random()*9000+1000);
+//			console.log(a);
+//			把随机数写入p标签当中
+			oP.innerHTML=a;		
+			
+//			点击提交的时候获取验证码
+			oBtn[1].onclick=function(){
+				//做验证,先要获取你input输入框里面的内容
+				var test=oInp.value;
+//				console.log(test);
+				if(test==a){
+					alert("验证成功")
+				}else{
+					alert("验证失败");
+				}
+			}							
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>
