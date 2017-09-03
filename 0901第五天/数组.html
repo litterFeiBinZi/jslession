@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+		</ul>	
+	</body>
+	<script type="text/javascript">
+//	
+//		//创建数组的第一种方式
+//		var arr=[];
+//		console.log(arr);
+//		
+//		//创建数组的第二种方式
+//		var arr1=new Array();
+//		console.log(arr1);
+//		
+
+//		var arr=[1,"erewrrew",null,undefined,true];
+//		
+//		console.log(arr[4]);
+
+//		var oLi=document.getElementsByTagName("li");
+//		console.log(oLi);
+//		
+////		length是数组的一个属性值,代表数组中含有几个元素
+//		
+//		for(var i=0;i<oLi.length;i++){
+//			oLi[i].style.background="red";
+//		}
+//	
+//		var oLi=document.getElementsByTagName("li");
+////		var arr=["yellow","green","red","purple","black","cyan"];
+//		var arr=[{
+//			data:"日期",
+//			imgsrc:"照片地址",
+//			font:"文字"
+//		},{
+//			data:"日期",
+//			imgsrc:"照片地址",
+//			font:"文字"
+//		},{
+//			data:"日期",
+//			imgsrc:"照片地址",
+//			font:"文字"
+//		},{
+//			data:"日期",
+//			imgsrc:"照片地址",
+//			font:"文字"
+//		},{
+//			data:"日期",
+//			imgsrc:"照片地址",
+//			font:"文字"
+//		},{
+//			data:"日期",
+//			imgsrc:"照片地址",
+//			font:"文字"
+//		}];
+//		
+//		for(var i=0;i<oLi.length;i++){
+//			oLi[i].innerHTML=arr[i].data;
+//		}
+//		
+
+//		var arr=[1,2,3,4,"yyy"];
+//		pop(): 删除数组的最后一个元素并返回删除的元素
+//		var a=arr.pop();
+//		console.log(a);
+//		console.log(arr.length);
+		
+		var arr=[1,2,3,4,"yyy"];
+//		push(): 向数组的末尾添加一个/多个元素,并返回最新的长度
+//		var a=arr.push("uuuuuuuu");
+//		console.log(a);
+//		console.log(arr);
+		
+		
+		var arr=["iiii",2,3,4,"yyy"];
+//		shift(): 删除并返回数组的第一个元素
+		
+//		var a=arr.shift();
+//		console.log(a);
+//		console.log(arr);
+		
+		var arr=["iiii",2,3,4,"yyy"];
+//		unshift(): 向数组的开头添加一个或多个元素,并返回新长度
+//		var a=arr.unshift("oooooo","ppppp");
+//		console.log(a);
+//		console.log(arr);
+		
+		
+		
+		var arr=["iiii",2,3,4,"yyy"];
+//		splice(): 从数组中添加或删除元素
+//	 	splice(参数1:下标,参数2:长度);
+		
+		//截取
+//		var a=arr.splice(0,arr.length);
+//		console.log(a);
+	
+//		添加
+//		arr.splice(1,0,"opopop","pppppp");
+//		console.log(arr);
+
+		
+	
+		var arr=["iiii",2,3,4,"yyy"];
+//		slice(): 选取数组的一部分,返回一个新的数组
+//		arr.slice(开始位置：下标,结束位置：下标，不会选到当前下标);
+//
+//		var a=arr.slice(1,4);
+//		console.log(a);
+//		
+//		var b=arr.slice(1);
+//		console.log(b);
+	
+	
+	
+	
+//		var arr=["iiii",2,3,4,"yyy"];
+//	
+//	
+//		arr.splice(2,1);
+//		console.log(arr);
+
+
+
+//		splice()方法和slice()方法的区别
+		
+//		共同点:第一个数值都是下标
+//		
+//		区别点:第二个数值不同
+//			splice()第二个数值为长度
+//			slice()第二个数值为下标,并且不包含当前下标
+
+
+		var arr=["iiii",2,3,4,"yyy"];
+//		var a=arr.splice(-2,1);
+//		splice第一个数识别负数,-1代表倒数第一个,以此类推
+//		console.log(a);
+
+//		arr.splice(-2,0,"ooo");
+//		console.log(arr);
+//		
+//		var arr=["iiii",2,3,4,"yyy"];
+////		slice不识别负数
+//		var a=arr.slice(-1,-3);
+//		console.log(a);
+	
+		
+		var arr=[1,2,3,4,5,6];
+//		console.log(arr);
+//		//将数组转化为字符串
+//		var a=arr.join();
+//		console.log(a);
+	
+	
+		var arr=[1,2,3,4,5,6];
+		arr=arr.reverse();
+		console.log(arr);
+	
+	
+	
+	
+	
+	
+	
+			/*
+		 	数组是一种复杂数据类型,其作用是作为一种多个或多种数据的容器
+
+		 	数组中的数据,使用下标进行访问, ** 下标从0开始,到长度-1结束 **
+
+		 	属性
+
+		 		length: 用来获取数组的长度,非常非常非常的常用
+
+		 	方法
+		 		pop(): 删除数组的最后一个元素并返回删除的元素
+		 		push(): 向数组的末尾添加一个/多个元素,并返回最新的长度
+		 		shift(): 删除并返回数组的第一个元素
+		 		unshift(): 向数组的开头添加一个或多个元素,并返回新长度
+
+		 		splice(): 从数组中添加或删除元素
+				slice(): 选取数组的一部分,返回一个新的数组
+
+				join(): 将数组中的所有元素,转换成字符串
+				reverse(): 将数组中的所有元素倒置.
+
+		*/
+	</script>
+</html>
