@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var a="hello world";
+//		console.log(a.length);
+		
+		// 转义字符 \n \r \f 
+		
+//		字符串方法
+//				charAt(): 返回指定索引的字符,索引的范围 0 ~ length-1
+		var a="HELLO WORLD";
+//		console.log(a.charAt(4));
+		
+//		toUpperCase(): 将字符串转换为大写.
+		
+//		console.log(a.toUpperCase());
+//		console.log(a.toLowerCase());
+	
+//		indexOf()	 : 查找字符串 
+//				第一参数:查找内容 
+//				第二参数:开始下标
+
+   		var a="My name is wangxueqian,my nickname is hunshentongchouwei,important things i speak three times,my is wangxueqian ,my is wangxueqian ,my is wangxueqian";
+   		
+   		var b=a.indexOf("wangxueqian",12);
+   		console.log(b);
+   		
+   		
+   		
+   		
+   		//substring(): 获取子字符串
+//				第一参数:开始位置
+//				第二参数:结束位置,这个参数截取不到
+
+//		var a="My name is wangxueqian,my nickname is hunshentongchouwei,important things i speak three times,my is wangxueqian ,my is wangxueqian ,my is wangxueqian";
+//		
+//		var b=a.substring(1);
+//		console.log(b);
+   		
+//			slice(): 获取子字符串
+//				第一参数:开始位置
+//				第二参数:结束位置,这个参数截取不到
+
+//		var a="My name is wangxueqian,my nickname is hunshentongchouwei,important things i speak three times,my is wangxueqian ,my is wangxueqian ,my is wangxueqian";
+//		
+//		var b=a.slice(-10,-5);
+//		console.log(b);
+   		
+//		 substring & slice的区别在于处理负数
+//
+//		 	substring中的负数,会变为0.
+//
+//		 	slice中的负数,是倒数第几个.
+	
+	
+	
+//				substr(): 获取子字符串
+//				第一参数:开始位置
+//				第二参数:获取长度
+
+		var a="My name is wangxueqian,my nickname is hunshentongchouwei,important things i speak three times,my is wangxueqian ,my is wangxueqian ,my is wangxueqian";
+		
+		var b=a.substr(5,15);
+		console.log(b);
+
+
+
+
+
+
+
+
+
+
+	
+		/*		
+			转义字符: 是一种特殊字符,具有自身存在的意义.
+			字符串属性
+				length: 用于测量字符串的长度.
+			字符串方法
+				charAt(): 返回指定索引的字符,索引的范围 0 ~ length-1
+				toUpperCase(): 将字符串转换为大写.
+				toLowerCase(): 将字符串转换为小写
+
+				indexOf()	 : 查找字符串 
+				第一参数:查找内容 
+				第二参数:开始下标
+
+				substring(): 获取子字符串
+				第一参数:开始位置
+				第二参数:结束位置
+
+				substr(): 获取子字符串
+				第一参数:开始位置
+				第二参数:获取长度
+
+				slice(): 获取子字符串
+				第一参数:开始位置
+				第二参数:结束位置
+
+		 substring & slice的区别在于处理负数
+
+		 	substring中的负数,会变为0.
+
+		 	slice中的负数,是倒数第几个.
+		*/
+	</script>
+</html>

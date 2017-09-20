@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 600px;
+				background: yellowgreen;
+			}
+			section{
+				width: 200px;
+				height: 100px;
+				background: deepskyblue;
+				position: relative;
+			}
+			p{
+				margin: 0;
+				padding: 0;
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				left: 200px;
+				top: 0;
+			}
+		</style>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		首先获取body
+		var body=document.body;
+		
+//		给document文档添加右键菜单事件
+		document.oncontextmenu=function(ev){
+//			每一次执行这个右键菜单事件的时候,清空一下你的body
+			body.innerHTML="";
+//			处理兼容性的问题,ie识别window.event
+			var e=ev||window.event;
+//			console.log(e);
+//			为什么会用到event呢?
+//			我需要用到当前右键的坐标点,而这个最标点只能通过event来获取
+
+			console.log("当前点击点的x坐标"+e.clientX);
+			console.log("当前点击点的y坐标"+e.clientY);
+			
+//			右键首先创建一个div
+			var oDiv=document.createElement("div");
+//			创建出来div之后添加到body里
+			body.appendChild(oDiv);
+			
+			oDiv.style.position="absolute";
+			
+//			将当前右键的坐标点给div设置
+			oDiv.style.left=e.clientX+"px";
+			oDiv.style.top=e.clientY+"px";
+			
+			this.ondblclick=function(){
+				body.innerHTML="";
+			}
+			
+//			for循环动态 创建div里面的元素
+			for(var i=0;i<6;i++){
+				var oSec=document.createElement("section");
+//				动态创建的section添加到咱动态创建出来的div里
+				oDiv.appendChild(oSec);
+				oSec.innerHTML=i;	
+			}
+			
+//			获取section,作用给每一个section添加一个子集
+			var oSECC=document.querySelectorAll("section");
+			console.log(oSECC);
+			
+			for(var i=0;i<oSECC.length;i++){
+//				遍历每一个section,为添加做准备
+//				遍历给每一个section添加上一个叫index的属性,作用是获取当前的下标(索引值)
+				oSECC[i].index=i;
+				
+				oSECC[i].onmouseover=function(){
+//					alert(this.index);
+//					获取当前移入到哪一个的具体下标
+					var num=this.index;
+//					动态创建section的子集
+					var oP=document.createElement("p");
+//					oP.style.top=+"px";
+					
+//					添加到指定的那个section里面
+					oSECC[num].appendChild(oP);
+					
+//					当我离开指定的那个section的时候,干掉他的子集
+					this.onmouseout=function(){
+						oSECC[num].removeChild(oP);
+					}
+					
+					
+				}
+				
+			}
+			
+			
+//			去掉右键菜单事件的默认事件
+			return false;
+			
+		}
+		
+		
+		
+	</script>
+</html>

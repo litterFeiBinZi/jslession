@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>轮播图</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			.box{
+				width: 800px;
+				height: 400px;
+				border:1px solid red;
+				margin: 0 auto;
+				position: relative;
+				overflow: hidden;
+			}
+			.wrap{
+				width: 2400px;
+				height: 400px;
+				background: yellowgreen;
+				overflow: hidden;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: all 2s;
+			}
+			.wrap img{
+				width: 800px;
+				height: 400px;
+				float: left;
+			}
+			ul{
+				width: 180px;
+				overflow: hidden;
+				position: absolute;
+				z-index: 2;
+				bottom: 0;
+				left: 50%;
+				margin-left: -90px;
+			}
+			ul li{
+				width: 50px;
+				height: 50px;
+				float: left;
+				border-radius: 50%;
+				text-align: center;
+				line-height: 50px;
+				background: yellowgreen;
+				color: white;
+			}
+			ul li:nth-child(2){
+				margin: 0 15px;
+			}
+			
+			.point{
+				width: 50px;
+			}
+			.point div{
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background: darkcyan;
+				color: white;
+				text-align: center;
+				line-height: 50px;
+			}
+			button{
+				position: absolute;
+				top: 50%;
+				left: 0;
+			}
+			.ii{
+				left: 789px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="wrap">
+				<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1505184576&di=6c7cbad54b9f69e4bf93a359a54be8a9&imgtype=jpg&er=1&src=http%3A%2F%2Fimg3.yxlady.com%2Fyl%2FUploadFiles_5361%2F20150822%2F20150822214144222.jpg" alt="" />
+				<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1505184591&di=353ebf69802f85dfaccbf4651cfa06e4&imgtype=jpg&er=1&src=http%3A%2F%2Fimage.tianjimedia.com%2FuploadImages%2F20150930102115901.jpg" alt="" />
+				<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1505185812&di=b011ad3ff3d56648e9769bcbedf1c320&imgtype=jpg&er=1&src=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fitem%2F201505%2F19%2F20150519095150_JW25N.jpeg" alt="" />
+			</div>
+			
+			
+			<!--数字点击的按钮-->
+			
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+			
+			<button>&lt;</button>
+			<button class="ii">&gt;</button>
+		</div>
+		
+		<div class="point">
+			<div class="kid">1</div>
+			<div class="kid">2</div>
+			<div class="kid">3</div>
+		</div>
+		
+		
+		
+		
+	</body>
+	<script type="text/javascript">
+		var oWrap=document.querySelector(".wrap");
+		var oLi=document.querySelectorAll("li");
+		var oKid=document.getElementsByClassName("kid");
+		
+		var oBtn=document.querySelectorAll("button");
+		
+		var o=0;
+		oBtn[0].onclick=function(){
+			clearInterval(timer);
+			o++;
+			if(o==3){
+				o=0;
+			}
+			
+			for(var j=0;j<oLi.length;j++){
+				oLi[j].style.background="yellowgreen";
+				oKid[j].style.background="darkcyan";
+			}
+			oLi[o].style.background="cornflowerblue";
+			oKid[o].style.background="coral";
+			
+			
+			
+			oWrap.style.left=-800*o+"px";
+		}
+		k=2;
+		oBtn[1].onclick=function(){
+			clearInterval(timer);
+			k--;
+			if(k==-1){
+				k=2;
+			}
+			
+			for(var j=0;j<oLi.length;j++){
+				oLi[j].style.background="yellowgreen";
+				oKid[j].style.background="darkcyan";
+			}
+			oLi[k].style.background="cornflowerblue";
+			oKid[k].style.background="coral";
+			
+			
+			
+			oWrap.style.left=-800*k+"px";
+		}
+		
+//		控制移动的倍数
+		var num=0;
+//		将定时器赋值给一个变量,作用是为下面清除方便
+		var timer=setInterval(function(){
+			num++;
+			
+			if(num==3){
+				num=0;
+			}
+			for(var j=0;j<oLi.length;j++){
+				oLi[j].style.background="yellowgreen";
+				oKid[j].style.background="darkcyan";
+			}
+			oLi[num].style.background="cornflowerblue";
+			oKid[num].style.background="coral";
+			
+			
+			
+			oWrap.style.left=-800*num+"px";
+		},2000);
+		
+		
+		//点击停掉定时器
+		//for循环添加点击事件
+		for(var i=0;i<oLi.length;i++){
+//			通过for循环来给每一个li添加一个叫index的属性,(索引值)
+//			它的作用是显示每一个li的下标
+			oLi[i].index=i;
+			oKid[i].index=i;
+			oLi[i].onclick=function(){
+//				点击的时候停掉定时器
+				clearInterval(timer);
+				
+				
+				//点击获取当前下标
+				var a=this.index;
+				console.log(a);
+				
+//				将获取的当前小标与位移的倍数联系起来
+				oWrap.style.left=-800*a+"px";
+				
+				
+				//点击的时候这个for循环初始化你的样式
+				for(var j=0;j<oLi.length;j++){
+					oLi[j].style.background="yellowgreen";
+					oKid[j].style.background="darkcyan";
+				}
+				
+				//点击获取当前的li的颜色进行变化
+				oLi[a].style.background="cornflowerblue";
+				oKid[a].style.background="coral";
+				
+			}
+			
+			
+			oKid[i].onclick=function(){
+//				点击的时候停掉定时器
+				clearInterval(timer);
+				
+				
+				//点击获取当前下标
+				var a=this.index;
+				console.log(a);
+				
+//				将获取的当前小标与位移的倍数联系起来
+				oWrap.style.left=-800*a+"px";
+				
+				
+				//点击的时候这个for循环初始化你的样式
+				for(var j=0;j<oLi.length;j++){
+					oLi[j].style.background="yellowgreen";
+					oKid[j].style.background="darkcyan";
+				}
+				
+				//点击获取当前的li的颜色进行变化
+				oLi[a].style.background="cornflowerblue";
+				oKid[a].style.background="coral";
+				
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

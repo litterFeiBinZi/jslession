@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background: yellowgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+	<script type="text/javascript">
+		var oDiv=document.querySelector("div");
+		
+		var num=0;
+		var speedX=5;
+		var numY=0;
+		var speedY=10;
+		setInterval(function(){
+			num+=speedX;//num=num+speedX;
+			
+			numY+=speedY;//num=num+speedX;
+			
+			var _width=window.innerWidth;
+			var _height=window.innerHeight;
+			
+			console.log(_width);
+			console.log(_height);
+			
+			
+//			获取盒子的宽度
+			var odWidth=oDiv.offsetWidth;
+			
+//			console.log(odWidth);
+			
+			//接受真实的移动距离
+			var a=_width-odWidth;
+			
+			var b=_height-odWidth;
+			
+			
+			if(num>=a){
+				speedX=-1*speedX;
+			}else if(num<=0){
+				speedX=-1*speedX;
+			}
+			
+			if(numY>=b){
+				speedY=-1*speedY;
+			}else if(numY<=0){
+				speedY=-1*speedY;
+			}
+			
+			oDiv.style.marginLeft=num+"px";
+			oDiv.style.marginTop=numY+"px";
+			
+		},1)
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

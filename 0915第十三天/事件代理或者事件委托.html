@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>事件代理或者事件委托</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			ul{
+				width: 300px;
+				border: 1px solid #9ACD32;
+				padding: 10px;
+				margin: 0 auto;
+			}
+			ul li{
+				width: 300px;
+				height: 100px;
+				background: burlywood;
+				text-align: center;
+				line-height: 100px;
+				color: white;
+				font-size: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li><mark>1</mark></li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		var oUl=document.querySelector("ul");
+		var oLi=document.querySelectorAll("li");
+//		for (var i=0;i<oLi.length;i++) {
+//			oLi[i].index=i;
+//			oLi[i].onclick=function(){
+//				var num=this.index;
+//				alert(num);
+//				
+//				var li1=document.createElement("li");
+//				li1.innerHTML=num+1;
+//				oUl.appendChild(li1);
+//				
+//			}	
+//		}
+
+		//事件源
+		//也可以叫事件代理
+		oUl.onclick=function(ev){
+			var e=ev||window.event;
+//			event跟你点击相关的所有的信息都打印出出来
+//			console.log(e);
+			
+//			点谁谁就是事件源,事件源包含在事件里面
+			console.log(e.target);
+			
+//			取到事件源的名字,进行相关操作
+			console.log(e.target.tagName);
+			
+			var tgName=e.target.tagName;
+			tgName=tgName.toLowerCase();
+			
+			console.log(tgName);
+			
+			
+			if(tgName=="li"){
+				var li1=document.createElement("li");
+				li1.innerHTML=e.target.innerHTML;
+				oUl.appendChild(li1);
+			}	
+		}
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		//事件源
+		//也可以叫事件代理
+		//.tagName获取元素标签名（大写的）
+//		console.log(container.tagName);
+		//只需要一个事件就可以来执行,加给父级
+	</script>
+</html>

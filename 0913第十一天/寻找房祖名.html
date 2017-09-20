@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.box{
+				width: 800px;
+				height: 800px;
+				border: 1px solid black;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+	</body>
+	<script type="text/javascript">
+		var oBox=document.querySelector(".box");
+		
+		var n=2;
+		
+		function yy(){
+			oBox.innerHTML="";
+			for(var i=0;i<n*n;i++){
+				var img=new Image();
+					
+				var _width=oBox.clientWidth/n;
+				console.log(_width);
+				img.src="img/333.jpg";
+				img.style.width=_width+"px";
+				img.style.height=_width+"px";
+					
+				oBox.appendChild(img);
+			}
+			
+			var imgs=document.querySelectorAll("img");
+			console.log(imgs);
+			
+			var num=parseInt(Math.random()*(n*n));
+			
+			imgs[num].src="img/444.jpg";
+			
+			imgs[num].onclick=function(){
+				n++;
+				yy();
+			}
+		}
+		
+		yy();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

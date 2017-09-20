@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" value="请输入您的手机号"/>
+		<span></span>
+	</body>
+	<script type="text/javascript">
+		var oInp=document.querySelector("input");
+		var oSpan=document.querySelector("span");
+		
+		oInp.onfocus=function(){
+			this.value="";
+		}
+		oInp.onblur=function(){
+			var str=this.value;
+			
+//			var reg=/^(13)\d{9}$/;
+//			var reg=/^(147)\d{8}$/;
+
+			//6-16密码不能包含空格，是数字字母下划线，9位以下不能为纯数字
+			var reg=/^\S{5}[\S|\D]/g;
+			
+			var res=reg.test(str);
+			
+			if(res){
+				alert("手机号符合规则");
+			}else{
+				alert("手机号不符合规则");
+			}
+			https://regexper.com/
+			
+		}
+	</script>
+</html>

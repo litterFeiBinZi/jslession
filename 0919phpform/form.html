@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<form action="formformget.php" method="get">
+			<!--form表单
+			get方法提交后台是通过url地址栏来进行传输，有长度限制，是通过键值对的方式来进行连接，username=小葱，键值对之间通过&符号来进行拼接，后台接受的是前台的name属性里面的值-->
+			<!--get因为是通过url地址栏来进行传输数据，所以会暴露用户的信息，有信息安全隐患-->
+			用户名：<input type="text" name="username"/>
+			<br />
+			性别：<input type="text" name="sex"/>
+			<br />
+			年龄：<input type="text" name="age"/>
+			<br />
+			<input type="submit" value="提交"/>
+		</form>
+	</body>
+</html>

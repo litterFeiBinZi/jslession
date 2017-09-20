@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background: yellowgreen;
+				margin-left: 20%;
+				margin-top: 10%;
+				border: 10px solid #ccc;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div></div>
+	</body>
+		<script type="text/javascript">
+//			window.onload=function(){
+//				document.onclick=function(ev){
+//					var e=ev||window.event;
+//					console.log("点击获取当前点的x坐标："+e.clientX);
+//					console.log("点击获取当前点的y坐标："+e.clientY);
+//				}
+//			}
+
+			var oDiv=document.querySelector("div");
+			
+			console.log("获取div距离可视区左边的距离"+oDiv.offsetLeft);
+			console.log("获取div距离可视区上边的距离"+oDiv.offsetTop);
+			
+			console.log("获取指定元素的高度"+oDiv.offsetHeight);
+			console.log("获取指定元素的宽度"+oDiv.offsetWidth);
+			
+			console.log("获取指定元素可视区的高度"+oDiv.clientHeight);
+			console.log("获取指定元素可视区的宽度"+oDiv.clientWidth);
+			
+			
+		</script>
+
+</html>

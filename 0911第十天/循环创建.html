@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;list-style: none;}
+			ul{
+				width: 1000px;
+				overflow: hidden;
+				border:1px solid #FFFF00;
+				margin: 0 auto;
+			}
+			.kid{
+				width: 200px;
+				height: 200px;
+				background: yellowgreen;
+				float: left;
+			}
+			.kid img{
+				border:0;
+				width: 200px;
+				height: 150px;
+			}
+			.kid p{
+				width: 200px;
+				height: 50px;
+				font-size: 10px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			
+		</ul>
+	</body>
+	<script type="text/javascript">
+		var oUl=document.querySelector("ul");
+		
+	
+		var arr=[
+			{
+				imgsrc:"http://img2.a0bi.com/upload/ttq/20140811/1407710134236.jpg",
+				text:"徐克电影的女人尽显颠覆美"
+			},
+			{
+				imgsrc:"http://c.hiphotos.baidu.com/zhidao/pic/item/96dda144ad345982f060fa890ef431adcaef84c6.jpg",
+				text:"英国民众复古打扮出席车展"
+			},
+			{
+				imgsrc:"http://d.hiphotos.baidu.com/zhidao/pic/item/4e4a20a4462309f71b4c3314740e0cf3d7cad691.jpg",
+				text:"泰迪夫妻用婴儿背带遛娃"
+			},
+			{
+				imgsrc:"http://h.hiphotos.baidu.com/zhidao/pic/item/a1ec08fa513d26974e7a280853fbb2fb4316d83d.jpg",
+				text:"林心如舌吻风波再起"
+			},
+			{
+				imgsrc:"http://pic13.nipic.com/20110318/4948186_163650242116_2.jpg",
+				text:"中国功夫亮相纽约时报广场"
+			},
+			{
+				imgsrc:"http://f.hiphotos.baidu.com/zhidao/pic/item/574e9258d109b3de1965ce43cebf6c81810a4cc6.jpg",
+				text:"苹果A11处理器完虐安卓"
+			},
+			{
+				imgsrc:"http://p.store.itangyuan.com/p/chapter/attachment/EtAtEtMW/EgfUegIweB2SEBEUe_-VETusKH9p86OSfne2EtangmDciB1lj6Oq9Cf.jpg",
+				text:"只有上半身的他活得精彩"
+			},
+			{
+				imgsrc:"http://p11.aipai.com/photo/420/35797420/photo/246/3122678/3122678_normal.jpg",
+			text:"关于《还珠》的四大传言"
+			},
+			{
+				imgsrc:"http://i.zeze.com/attachment/forum/201511/15/093841_7937.jpeg",
+				text:"盘点明星们的奇葩手机壳"
+			},
+			{
+				imgsrc:"http://e.hiphotos.baidu.com/zhidao/pic/item/4610b912c8fcc3cef7406c629445d688d53f20da.jpg",
+				text:"南非水牛狮嘴下协力救同伴"
+			}];
+			
+			for(var i=0;i<arr.length;i++){
+				var oLi=document.createElement("li");
+				oLi.setAttribute("class","kid");
+				var oImg=document.createElement("img");
+				var oP=document.createElement("p");
+				oImg.src=arr[i].imgsrc;
+				oP.innerText=arr[i].text;
+				oLi.appendChild(oImg);
+				oLi.appendChild(oP);
+				oUl.appendChild(oLi);
+			}
+			
+
+		
+	</script>
+</html>

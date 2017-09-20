@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>事件监听</title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				background: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+	<script type="text/javascript">
+		var oDiv=document.querySelector("div");
+		
+//		通过on方式来绑定的同一个事件,只能绑定一个,如果绑定多个的话,下面的会把上面的给覆盖掉
+		
+//		oDiv.onclick=function(){
+//			alert(1);
+//		}
+//		oDiv.onclick=function(){
+//			alert(2);
+//		}
+//		oDiv.onclick=function(){
+//			alert(3);
+//		}
+//	
+
+//		通过事件监听的方式来给同一个元素绑定多个相同的事件
+	
+//		事件监听      addEventListener();
+//		三个参数
+//			第一个:你要绑定的事件
+//			第二个:你要执行的方法
+//			第三个:true或者false
+//					true代表事件下沉
+//					false代表事件冒泡
+//			第三个参数默认是false,如果你不写第三个参数的时候,那么他就默认为false,也就是事件冒泡
+//		oDiv.addEventListener("click",function(){
+//			alert(1);
+//		},false);
+//		oDiv.addEventListener("click",function(){
+//			alert(2);
+//		},false);
+//		oDiv.addEventListener("click",function(){
+//			alert(3);
+//		},false);
+
+//		function func1(){
+//			alert(1);
+//		}
+//		function func2(){
+//			alert(2);
+//		}
+//		function func3(){
+//			alert(3);
+//		}
+//		
+//		oDiv.addEventListener("click",func1);
+//		oDiv.addEventListener("click",func2);
+//		oDiv.addEventListener("click",func3);
+
+		
+		oDiv.oncontextmenu=function(ev){
+			var e=ev||window.event;
+			alert(1);
+//			return false;
+			e.preventDefault();
+
+		}
+//		oDiv.addEventListener("contextmenu",function(ev){
+//			var e=ev||window.event;
+//			alert(1);
+////			事件监听用return false不能去掉默认事件,我们可以使用e.preventDefault()来去掉默认事件
+//			e.preventDefault();
+//		});
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+//		如果给一个元素绑定多个事件使用的方式为
+//		事件监听---------addEventListener();
+//		addEventListener(绑定的事件,执行的方法,true/false);
+//		第三参数:
+//				true-->事件下沉
+//				false-->事件冒泡
+//		第三个参数可以不写,默认为false
+	</script>
+</html>

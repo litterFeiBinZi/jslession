@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>异常处理</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var a=1;
+		var b=2;
+//		if(a>b){
+//			alert("u");
+//		}else{
+//			alert("o");
+//		}
+
+//		try尝试着执行里面的代码,如果可以的话,跳过catch
+//		如果执行try里面的语句报错的,catch会捕获try里面出错的原因
+		try{
+			alert(c);
+		}catch(e){
+			alert(e.message);
+			alert(a);
+		}finally{
+			alert("不管前面那俩傻逼怎么打，我都执行");
+		}
+
+	
+
+		
+	</script>
+</html>

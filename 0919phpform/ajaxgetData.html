@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;list-style: none;}
+			ul{
+				width: 800px;
+				background: blanchedalmond;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<button>按钮</button>
+		<ul></ul>
+	</body>
+	<script type="text/javascript">
+		var oBtn=document.querySelector("button");
+		var oUl=document.querySelector("ul");
+		oBtn.onclick=function(){
+			var xhr=null;
+			
+			try{
+				xhr=new XMLHttpRequest();
+			}catch(e){
+				xhr=new ActiveXObject('Microsoft.XMLHTTP');
+			}
+			
+			xhr.open("GET","newData.php",true);
+			xhr.send();
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4){
+					if(xhr.status==200){
+						var data=xhr.responseText;
+						data=JSON.parse(data);
+						console.log(data);
+						
+						for(var i=0;i<data.length;i++){
+							var oLi=document.createElement("li");
+							var oSpan1=document.createElement("span");
+							oSpan1.innerHTML=data[i].title;
+							var oSpan2=document.createElement("span");
+							oSpan2.innerHTML=data[i].date;
+						oLi.appendChild(oSpan1);
+						oLi.appendChild(oSpan2);	
+						
+						oUl.appendChild(oLi);
+						}
+						
+					}
+				}
+			}
+		}
+		
+		
+		
+		
+		
+	</script>
+</html>

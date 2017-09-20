@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.son{
+				width: 100px;
+				height: 100px;
+				background: yellow;
+				margin: 0 auto;
+			}
+			.far{
+				width: 200px;
+				height: 200px;
+				background: yellowgreen;
+				margin: 0 auto;
+			}
+			.gdf{
+				width: 300px;
+				height: 300px;
+				background: cyan;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="gdf">
+			<div class="far">
+				<div class="son"></div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var gdf=document.querySelector(".gdf");
+		var far=document.querySelector(".far");
+		var son=document.querySelector(".son");
+//		事件冒泡和事件捕获是描述事件触发时序问题的术语，事件捕获指的是从document到触发事件的那个节点，即自上而下的去触发事件。相反的，事件冒泡是自下而上的去触发事件。绑定事件方法的第三个参数，就是控制事件触发顺序是否为事件捕获。true,事件捕获；false,事件冒泡。默认false,即事件冒泡。Jquery的e.stopPropagation会阻止冒泡，意思就是到我为止，我的爹和祖宗的事件就不要触发了。
+
+		
+		
+		
+//		gdf.onclick=function(){
+//			alert("我是最外层");
+//		}
+//		far.onclick=function(){
+//			alert("我是中间");
+//		}
+//		son.onclick=function(ev){
+//			var e=ev||window.event;
+//			alert("我是最小里层");
+//			
+////			阻止事件传递
+////			e.stopPropagation();
+//
+//			//阻止事件冒泡
+//			e.cancelBubble=true;
+//			
+//		}
+		
+		
+	function func1(ev){
+		var e=ev||window.event;
+//		e.cancelBubble=true;
+		e.stopPropagation();
+		alert("我是最外层");
+		
+	}
+	function func2(){
+		alert("我是中间层");
+	}
+	function func3(ev){
+		
+//		e.cancelBubble=true;
+		
+		alert("我是最里层");
+	}
+		
+	gdf.addEventListener("click",func1,true);
+	far.addEventListener("click",func2,true);
+	son.addEventListener("click",func3,true);
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+	</script>
+</html>

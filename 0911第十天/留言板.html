@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 300px;
+				border: 1px solid #ccc;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<label for="">姓名</label>
+			<input type="text" />
+			<br />
+			<label for="">内容</label>
+			<textarea name="" rows="" cols="" style="resize: none;"></textarea>
+			<br />
+			<button>提交显示留言</button>
+			<ul>
+				
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var oInp=document.querySelector("input");
+		var oTex=document.querySelector("textarea");
+		var oBtn=document.querySelector("button");
+		var oUl=document.querySelector("ul");
+		
+		oBtn.onclick=function(){
+//			console.log(oInp.value);
+//			console.log(oTex.value);
+			if(oInp.value==""||oTex.value==""){
+				alert("请重新输入");
+			}else{
+				var inpV=oInp.value;
+				var texV=oTex.value;
+				
+				console.log(inpV);
+				console.log(texV);
+				
+				var oLi=document.createElement("li");
+				var oH1=document.createElement("h1");
+				var oP=document.createElement("p");
+				var a=document.createElement("a");
+				
+				
+				oH1.innerHTML=inpV;
+				oP.innerHTML=texV;
+				a.innerHTML="删除";
+				a.href="###";
+				oP.appendChild(a);
+				
+				oLi.appendChild(oH1);
+				oLi.appendChild(oP);
+				
+				console.log(oLi);
+				
+				oUl.appendChild(oLi);
+				
+				a.onclick=function(){
+					oUl.removeChild(oLi);
+				}
+				
+				
+				oInp.value="";
+				oTex.value="";
+				
+			}
+			
+			
+		}
+		
+		
+		
+		
+		
+	</script>
+</html>

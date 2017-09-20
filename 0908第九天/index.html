@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>寻找房祖名</title>
+    <style>
+    #box{
+        width:600px;
+        height:600px;
+        margin:0 auto;
+        border:1px solid #000;
+    }
+    img{
+        float:left;
+        box-sizing:border-box;
+        border:1px solid #000;
+    }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+<script>
+    var box = document.querySelector('#box');
+    var n = 2;
+    function randFn(){
+        box.innerHTML = '';
+ 
+        for(var i = 0;i < n * n;i++){
+            var img = new Image();
+            img.src = "img/333.jpg";
+ 
+            var _width = box.clientWidth /n;
+            img.style.width = _width + 'px';
+            box.appendChild(img);
+        }
+        var random = parseInt(Math.random() * n * n);
+ 
+        var imgs = document.querySelectorAll('img');
+ 
+        imgs[random].src = 'img/444.jpg';
+ 
+        imgs[random].onclick = function(){
+            n++;
+            randFn();
+        }
+    }
+    randFn();
+</script>
+</html>

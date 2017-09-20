@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 50px;
+				height: 50px;
+				background: yellowgreen;
+			}
+			img{
+				width: 100px;
+				height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1505119512132&di=8abd7c574826778e50909c30323bd95d&imgtype=0&src=http%3A%2F%2Fclub0.autoimg.cn%2Falbum%2Fuserphotos%2F2015%2F02%2F04%2F10%2F500_13362870-7823-glk8-cgm1-n203a197klc9.jpg" alt="" />
+	</body>
+	<script type="text/javascript">
+		var oDiv=document.querySelector("div");
+		var oImg=document.querySelector("img");
+		
+		var arr=[
+			{
+				id:"1",
+				imgsrc:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1505119512903&di=30ddf4e1a300b133216be1fce39db3bc&imgtype=0&src=http%3A%2F%2Fpic31.nipic.com%2F20130705%2F9527735_231146625000_2.jpg"
+			},
+			{
+				id:"2",
+				imgsrc:"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3318203063,4173394294&fm=27&gp=0.jpg"
+			},
+			{
+				id:"3",
+				imgsrc:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1505119619044&di=af641247b97634f3070cac3c53f58e6d&imgtype=0&src=http%3A%2F%2Fclub1.autoimg.cn%2Falbum%2Fuserphotos%2F2014%2F03%2F20%2F500_d43b5139-c95c-4d4e-8847-0045fd9120c8.jpg"
+			},
+			{
+				id:"4",
+				imgsrc:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1505119756347&di=29489ca589485df7fe1aece87559a3e2&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D1651987542%2C3787760642%26fm%3D214%26gp%3D0.jpg"
+			},
+			{
+				id:"5",
+				imgsrc:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1505119619042&di=b8f323048d2ba151c011e1f1b9609fc4&imgtype=0&src=http%3A%2F%2Fphoto.iautos.cn%2Fcarupload%2Fphoto%2F2016%2F0228%2F09%2F20160228091926814699.jpg"
+			}
+		];
+		var i=0;
+		oDiv.onclick=function(){
+			
+			oImg.src=arr[i].imgsrc;
+			i++;
+			if(i>=5){
+				alert("没了，瞎点啥啊");
+			}
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

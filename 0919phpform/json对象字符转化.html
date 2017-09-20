@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<!--<script src="JSON - 副本.js"></script>-->
+	<script type="text/javascript">
+//		var obj={
+//			"name":"于良",
+//			"age":18,
+//			"sex":"man",
+//			a:["1",2]
+//		}
+//		console.log(obj);
+		
+		
+		//json字符串转换为json对象
+		var a='{ "name" : "于良" , "age" : 18}';
+//		
+		console.log(a);
+//		var obj=JSON.parse(a);
+//		console.log(obj);
+		
+   		var obj = eval('(' + a + ')');
+		console.log(obj);
+////		
+//		
+//		
+
+		
+
+    	var last=JSON.stringify(obj); //将JSON对象转化为JSON字符
+//  	
+    	console.log(last);
+	</script>
+</html>

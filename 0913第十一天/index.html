@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		var oUl=document.querySelector("ul");
+		var oLi=oUl.querySelectorAll("li");
+		console.log(oLi);
+		
+//		childElementCount:计算当前元素内的所有子元素个数,没有换行和空格.
+//由于IE9一下版本,自动忽略换行和空格,所以规范中增加此属性
+//		var a=oUl.childElementCount;
+//		console.log(a);
+	
+	
+//		children:获取当前元素下的所有子元素
+//			注意：在IE678中会将注释节点获取到.
+
+//		var a=oUl.children;
+//		console.log(a);
+
+//		firstElementChild:只获取当前元素下的元素节点,没有换行和空格
+//			注意:IE678是不兼容的.lastElementChild
+
+//		var a=oUl.firstElementChild;
+//		console.log(a);
+//		
+
+//		previousElementSibling:获取当前元素前一个兄弟节
+//		注意;ie9 以下不兼容
+		
+//		var a = oLi[1].previousElementSibling;
+//		console.log(a);
+		
+		// 创建文本节点（标签里面的内容），拼接到li中
+		var text=document.createTextNode("我是标题");
+		oLi[0].appendChild(text);
+	
+	
+		 /*
+		childElementCount:计算当前元素内的所有子元素个数,没有换行和空格.
+		由于IE9一下版本,自动忽略换行和空格,所以规范中增加此属性
+		children:获取当前元素下的所有子元素
+			注意：在IE678中会将注释节点获取到.
+		firstElementChild:只获取当前元素下的元素节点,没有换行和空格
+			注意:IE678是不兼容的.lastElementChild
+		previousElementSibling:获取当前元素前一个兄弟节
+		注意;ie9 以下不兼容
+
+	 */
+	</script>
+</html>

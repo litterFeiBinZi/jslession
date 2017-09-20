@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button>按钮</button>
+	</body>
+	<script type="text/javascript">
+		var oBtn=document.querySelector("button");
+		oBtn.onclick=function(){
+			/*
+			1.创建一个ajax对象
+				ie6以下new ActiveXObject('Microsoft.XMLHTTP')
+			*/
+			var xhr = null;
+		
+			//第一种处理兼容方式
+//			if (window.XMLHttpRequest) {
+//				xhr = new XMLHttpRequest();  //Firefox(或其他非IE)
+//			} else {
+//				xhr = new ActiveXObject('Microsoft.XMLHTTP');  //IE浏览器
+//			}
+			
+			//第二种处理兼容方式
+			try {
+				xhr = new XMLHttpRequest();
+			} catch (e) {
+				xhr = new ActiveXObject('Microsoft.XMLHTTP');
+			}
+			
+			
+			
+			
+			
+			
+			//2.调用open方法配置参数
+//			open方法
+//			参数
+//				1.打开方式
+//				2.地址
+//				3.是否异步
+//					异步:非阻塞 前面的代码不会影响后面代码的执行
+//					同步:阻塞 前面的代码会影响后面代码的执行
+			xhr.open("GET","1.txt",true);
+			
+			
+			//3.调用send方法向后台接收或者发送数据
+			
+			xhr.send();
+			
+			
+			//等待服务器返回内容
+//			onreadystatechange事件监听ajax请求流程是否正确
+			xhr.onreadystatechange = function() {
+				if(xhr.readyState==4){
+					if(xhr.status==200){
+						//xhr.status监听服务器请求的状态码，看你发送的请求是否在服务器被正确解析了
+						console.log(xhr.responseText);
+					}
+					
+				}
+			}
+			
+			
+			
+			
+		}
+	</script>
+</html>

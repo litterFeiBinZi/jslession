@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			/*div{
+			width:200px;
+			height:100px;
+			background: red ;
+		}*/
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		div{
+			width: 300px;
+			background: #ccc;
+			height: 20px;
+		}
+		p{
+			width: 200px;
+			height: 30px;
+			background: #ccc;
+			font-size: 16px;
+			color: white;
+		}
+		</style>
+		
+	</head>
+	<body>
+		<!--<div></div>-->
+	</body>
+	<script type="text/javascript">
+		//var oDiv=document.getElementsByTagName("div")[0];
+		var Body=document.getElementsByTagName("body")[0];
+		
+		
+		document.oncontextmenu=function(ev){
+			Body.innerHTML="";
+			var ev=ev||window.event;
+			console.log(ev.clientX);
+			console.log(ev.clientY);
+			
+			Body.style.position="relative";
+			
+				
+		
+			var oDiv=document.createElement("div");
+		    oDiv.style.position="absolute";
+		    oDiv.style.top=ev.clientY+"px";
+		    oDiv.style.left=ev.clientX+"px";
+		    Body.appendChild(oDiv);
+		    
+		    for (var i=0;i<5;i++) {
+		    	var oP=document.createElement("p");
+		    	oDiv.appendChild(oP);
+		    	for(var j=0;j<3;j++){
+		    		
+		    	}
+		    }
+		    var oPP=document.getElementsByTagName("p");
+		    oPP[0].style.innerHTML="查看";
+		    oPP[1].style.innerHTML="排序方式";
+		    oPP[2].style.innerHTML="刷新";
+		    oPP[3].style.innerHTML="新建";
+		    oPP[4].style.innerHTML="小工具";
+		    
+		}
+		oPP[i].onmouseover=function(){
+			var pp=document.cr
+		}
+	</script>
+</html>

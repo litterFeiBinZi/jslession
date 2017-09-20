@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" value="聚焦消失，失焦显示"/>
+	</body>
+	<script type="text/javascript">
+//		正则表通常被用来检索、替换那些符合某个模式(规则)的文本
+		
+//		var str="sdadsa";
+//		var str=new String();
+//		
+//		var num=0000;
+//		var num=new Number();
+//		
+//		var arr=[];
+//		var arr=new Array();
+//		
+//		var obj={};
+//		var obj=new Object();
+//		
+//		var img=new Image();
+		
+//		正则表通常被用来检索、替换那些符合某个模式(规则)的文本
+//		正则表达式是对字符串（包括普通字符（例如，a 到 z 之间的字母）和特殊字符（称为“元字符”））操作的一种逻辑公式
+//		var reg=/ii/;
+//		var reg=new RegExp("ooo","ig");
+
+
+
+//		var oInp=document.querySelector("input");
+//		document.onclick=function(){
+//			var str=oInp.value;
+//			console.log(str);
+//			
+//			var reg=/7 kill must die/;
+//			var res=reg.test(str);
+//			
+//			if(res){
+//				alert("7杀必死");
+//			}else{
+//				alert("人头都拿不到，辣鸡");
+//			}
+//			
+//		}
+		
+//		var reg=//;
+		
+//		test()方法 ,如果字符串当中有符合正则表达式规则的那么返回true,不符合返回false
+//		var res=reg.test(str);
+//		console.log(res);
+		
+		
+//		exec();
+		
+		
+//		var str="uoiodiuoasdjojoiajhernkqroiqnwmdkjnakjfhka";
+//		var reg=/uo/;
+		
+//		exec()方法返回的是数组,数组里面有三个值,分别是,第一个为匹配的条件,第二个是符合匹配的下标,第三个是全部的字符串
+//		var res=reg.exec(str);
+//		console.log(res);
+//		console.log(res[0]);
+//		console.log(res.index);
+//		console.log(res.input);
+//		
+		
+		
+		
+//		二.正则表达式中字符串的方法
+//		var str="Zhangkeqi is smart,zhangkeqi is so suibian";
+//		
+//		var reg=/keqi/;
+		
+//		search()方法返回的是符合条件的第一个元素的下标
+//		var res=str.search(reg);
+//		console.log(res);
+		
+		
+//		replace() 用第二个参数将符合正则表达式的字符串替换掉
+
+//		i不区分大小写  g全局匹配
+//		var res=str.replace(/zhangkeqi/gi,"xiaobingli");
+//		console.log(res);
+		
+		
+//		var str="346530dasjlkjagfjaoiewjoeq987528431794810asdasda80510dsadsajdlkAEWRWQRE_[]`\^!@#$%^&*()_>/[}{|~....";
+		
+//		var reg=/\w/g;
+//		var res=str.replace(reg,"*");
+//		console.log(res);
+		
+		/*对QQ号码进行校验 
+要求5~15位，不能以0开头，只能是数字*/
+		
+		
+		
+		
+//		var str="FBI.avi";
+//		var reg=/avi$/;
+////		脱字符  
+//		var res=reg.test(str);
+//		if(res){
+//			alert("是avi结尾的文件");
+//		}else{
+//			alert("不是avi结尾的文件");
+//		}
+
+
+//		var str="uuuu.txt";
+//		var reg=/(.txt){2,4}/;
+//		var res=str.replace(reg,".pdf");
+//		console.log(res);
+
+
+		
+		var oInp=document.querySelector("input");
+		oInp.onfocus=function(){
+			
+//			聚焦让当前input的value值为空
+			this.value="";
+		}
+//		
+//		oInp.onblur=function(){
+////			失去焦点进行改变,或者获取你输入的值
+//			this.value="聚焦消失，失焦显示";
+//		}
+
+		oInp.onblur=function(){
+			var a=this.value;
+			console.log(a);
+		}
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

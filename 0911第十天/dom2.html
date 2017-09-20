@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#first{
+				width: 100px;
+				height: 100px;
+				background: yellowgreen;
+			}
+			#sec{
+				width: 200px;
+				height: 200px;
+				background: cyan;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="first" title="百度一下你就这一道"></div>
+		<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1505111436901&di=2728fbdda52651fa0a976dacc5a3c7d2&imgtype=jpg&src=http%3A%2F%2Fimg.jiaodong.net%2Fpic%2F0%2F12%2F80%2F29%2F12802985_583106.jpg" alt="加载失败显示" />
+	</body>
+	<script type="text/javascript">
+		var oFit=document.getElementById("first");
+		var oImg=document.querySelector("img");
+		
+//		第一种方式:"."属性名,点后面必须是属性名,不能是变量
+
+//		oFit.id="sec";
+		
+//		第二种方式:"['属性名']",中括号内的属性名要用引号引起来
+		
+//		oFit['id']="sec";
+//		oFit['title']="jdsadoidosa";
+		
+		
+//		第三种方式:getAttribute('属性名'),只能获取到行间的属性;对于内联和外部的属性,获取不到
+		
+//		var a=oFit.getAttribute("title");
+//		console.log(a);
+		
+		
+		//setAttribute('属性名','属性值');:第一个参数是属性名,第二个参数是属性值.
+		
+//		oFit.setAttribute("id","sec");
+//		oFit.setAttribute("class","div1");
+		
+//		oFit.setAttribute("id","");
+//		removeAttribute():参数是需要删除的属性名
+	
+//		oFit.removeAttribute("class");
+		
+//		createElement():参数是需要创建的元素名
+//			注意:元素创建之后隶属于文档结构,如果需要展示,那么需要指定父级
+
+
+		var a=document.createElement("h1");
+		console.log(a);
+		oFit.appendChild(a);
+		a.innerText="<span>iiii</span>";
+		
+	
+	
+		/*
+		第一种方式:"."属性名,点后面必须是属性名,不能是变量
+		第二种方式:"['属性名']",中括号内的属性名要用引号引起来
+		第三种方式:getAttribute('属性名'),只能获取到行间的属性;对于内部和外部的属性,获取不到
+	
+	
+		setAttribute('属性名','属性值');:第一个参数是属性名,第二个参数是属性值.
+	
+		removeAttribute():参数是需要删除的属性名
+	
+		createElement():参数是需要创建的元素名
+			注意:元素创建之后隶属于文档结构,如果需要展示,那么需要指定父级
+
+	*/
+	</script>
+</html>

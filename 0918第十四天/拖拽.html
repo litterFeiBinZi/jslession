@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>拖拽</title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			div{
+				width: 100px;
+				height: 100px;
+				background: yellowgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+	<script type="text/javascript">
+		var oDiv=document.querySelector("div");
+		
+//		三个事件,
+//		1.onmousedown
+//		2.onmousemove
+//		3.onmouseup
+		
+		oDiv.onmousedown=function(ev){
+			var e=ev||window.event;
+			
+			console.log("鼠标在div里按下时x坐标点："+e.clientX);
+			var x=e.clientX-oDiv.offsetLeft;
+			var y=e.clientY-oDiv.offsetTop;
+			
+//			获取oDiv距离左边的间隙
+//			console.log(oDiv.offsetLeft);
+			
+			document.onmousemove=function(ev){
+				var e=ev||window.event;
+				
+				console.log("鼠标按下后，鼠标在document上移动的x点的坐标："+e.clientX);
+				var b=e.clientX;
+				
+				console.log(e.clientY);
+				var c=e.clientY;
+				
+				var colX=b-x;
+				var colY=c-y;
+				
+				
+				oDiv.style.marginLeft=colX+"px";
+				oDiv.style.marginTop=colY+"px";
+				
+				
+			}
+			
+		}
+		oDiv.onmouseup=function(){
+			document.onmousemove=null;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

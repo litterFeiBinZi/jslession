@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>dom1</title>
+	</head>
+	<body>
+		<p></p>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>
+				<p>
+					<span>99999</span>
+				</p>
+				<h1>dadada</h1>
+			</li>
+			
+		</ul>
+		
+		<em>iiii</em>
+	</body>
+	<script type="text/javascript">
+		var oUl=document.getElementsByTagName("ul")[0];
+		var oLi=document.getElementsByTagName("li");
+		var oEm=document.getElementsByTagName("em")[0];
+		var oH1=document.getElementsByTagName("h1")[0];
+		
+//		console.log(oEm);
+		
+//		childNodes:获取当前元素下的第一层节点
+//		注意:在标准浏览器下,此方法会将换行以及空格节点解析出来.
+//		   	IE9以下的版本不会解析换行和空格节点
+
+//		console.log(oUl.childNodes);
+		
+		
+//		firstChild:获取当前元素下的第一个子节点(包括换行和空格节点)
+//		console.log(oUl.firstChild);
+
+//		lastChild:获取当前元素下的最后一个子节点(包括换行和空格节点)
+
+//		console.log(oUl.lastChild);
+
+//		previousSibling:获取上一个节点(包括换行和空格节点)
+//				获取的是跟它同一级的兄弟关系的上一个节点
+		
+//		console.log(oUl.previousSibling);
+		
+		
+//		nextSibling:获取下一个节点(包括换行和空格节点)
+//					获取的是跟它同一级的兄弟关系的下一个节点
+		
+//		console.log(oUl.nextSibling);
+
+
+
+//		parentNode:获取父级元素节点
+		
+//		console.log(oLi.parentNode);
+
+
+		
+//		hasChildNodes:判断当前是否包含节点
+//		console.log(oLi.hasChildNodes());
+
+
+//		appendChild():添加某节点到父级元素节点
+//		添加到所有标签或者元素之后
+//		oUl.appendChild(oEm);
+
+
+		
+//		insertBefore():插入节点,第一个参数是需要插入的节点;第二个参数是插入到某节点之前
+//		oUl.insertBefore(oEm,oLi);
+
+
+//		replaceChild():替换节点;第一个参数是替换节点,第二个参数是被替换节点,最终将被替换的节点返回
+
+//		var a=oLi[4].replaceChild(oEm,oH1);
+//		console.log(a);
+
+		
+		
+//		removeChild():删除节点,调用这是父级元素,括号内是需要删除的节点名称
+	
+//		oUl.removeChild(oLi[4]);
+		
+		
+//		cloneNode():克隆节点;括号内参数是bool值,true克隆当前元素及文本和子元素
+//
+//		   	 false只克隆当前元素
+//		   	 		注意:克隆后的副本隶属于整个document文档,如果需要在结构中体现,
+//	  				那么需要为当前副本指定父级
+
+//		console.log(oLi[4].cloneNode(false));
+		
+		
+
+
+	
+		/*
+		Dom:Document Object Model  文档对象模型
+		Dom在js中起着非常重要的作用
+		可以作为结构和行为的桥梁,但他不隶属于js,在其他语言中也会用到Dom
+		Node :节点, 标签/属性/文本/注释
+		Dom NodeType
+		  1.元素节点===>1====>元素名字
+		  2.属性节点===>2====>属性名字
+		  3.文本节点===>3===>#text
+		  4.注释节点===>4===>#conment
+		  查看节点的类型:nodeType
+		  查看节点的名字:nodeName
+
+		  节点属性
+		   childNodes:获取当前元素下的第一层节点
+		   注意:在标准浏览器下,此方法会将换行以及空格节点解析出来.
+		   		IE9以下的版本不会解析换行和空格节点
+		   	firstChild:获取当前元素下的第一个子节点(包括换行和空格节点)
+		   	lastChild:获取当前元素下的最后一个子节点(包括换行和空格节点)
+		   	previousSibling:获取上一个节点(包括换行和空格节点)
+		   	nextSibling:获取下一个节点(包括换行和空格节点)
+		   	parentNodes:获取父级元素节点
+		   	hasChildNodes:判断当前是否包含节点
+		   	appendChild():添加某节点到父级元素节点
+		   	insertBefore():插入节点,第一个参数是需要插入的节点;第二个参数是插入到某节点之前
+		   	replaceChild():替换节点;第一个参数是替换节点,第二个接点是被替换节点,最终将被替换的节点返回
+
+
+		   	 removeChild():删除节点,调用这是父级元素,括号内是需要删除的节点名称
+		   	 cloneNode():克隆节点;括号内参数是bool值,true克隆当前元素及文本和子元素
+		   	 false只克隆当前元素
+		   	 		注意:克隆后的副本隶属于整个document文档,如果需要在结构中体现,
+	  				那么需要为当前副本指定父级
+
+
+	*/
+	</script>
+</html>

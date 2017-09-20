@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				background: yellow;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+	<script type="text/javascript">
+		var oDiv=document.querySelector("div");
+		var num=0;
+		var nT=0;
+		document.onkeydown=function(ev){
+			var e=ev||window.event;
+			var kCode=e.keyCode;
+
+//			if(kCode===37){
+//				num++;
+//				oDiv.style.left=-1*num+"px";
+//			}
+			
+			switch (kCode){
+				case 37: //if(kCode===37)
+					num--;
+					oDiv.style.left=num+"px";
+					break;
+				case 38:
+					nT--;
+					oDiv.style.top=nT+"px";
+					break;
+				case 39:
+					num++;
+					oDiv.style.left=num+"px";
+					break;
+				case 40:
+					nT++;
+					oDiv.style.top=nT+"px";
+					break;
+				default:
+					alert("请按上下左右");
+					break;
+			}
+			
+			
+			
+			
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

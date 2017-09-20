@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>this关键字</title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background: yellowgreen;
+			}
+			p{
+				background: yellow;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<p>文字文字文字文字</p>
+	</body>
+	<script type="text/javascript">
+		var oDiv=document.querySelector("div");
+		var oP=document.querySelector("p");
+		
+		oDiv.onmouseover=function(){
+			oP.style.display="block";
+			this.style.height="50px";
+			
+			this.onmouseout=function(){
+				oP.style.display="none";
+				this.style.height="100px";
+			}
+		}
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			/*
+				this关键字
+	
+				在一个函数中,this总是指向当前函数的所有者对象.
+	
+				this总是在运行时才能确定其具体指向的值.也才能知道他的调用对象
+	
+				this关键字在函数外,默认指向的是window
+			*/
+			
+//			this关键字在函数外,默认指向的是window
+//			console.log(this.document==document);
+			
+//			var obj = {
+//				o:37,
+//				c:function(){
+//					return this.o;
+//				}
+//			};
+//			console.log(obj.c());
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	</script>
+</html>
