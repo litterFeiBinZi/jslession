@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.max{
+				width: 100px;
+				height: 100px;
+				border: 1px solid #ccc;
+			}
+			.max img{
+				width: 100%;
+				height: 100%;
+			}
+			.box{
+				width: 150px;
+				height: 150px;
+				border: 1px solid #fcfcfc;
+				display: none;
+				overflow: hidden;
+			}
+			.box img{
+				width: 300px;
+				height: 300px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="max">
+			<img src="psb.jpg"/>
+			<div class="min">
+				
+			</div>
+		</div>
+		<div class="box">
+			<img id="img" src="psb.jpg"/>
+		</div>
+	</body>
+	<script type="text/javascript">
+		window.onload=function(){
+			var oMax=document.querySelector(".max");
+			var oMin=document.querySelector(".min");
+			var oBox=document.querySelector(".box");
+			var oImg=document.querySelector("#img");
+			//鼠标移入时，将box显示出来
+			oMax.onmouseover=function(){
+				oBox.style.display="block";
+			}
+			//鼠标移出时，将box隐藏出来
+			oMax.onmouseout = function(){  
+	            oBox.style.display="none"; 
+	        }
+			oMax.onmousemove=function(ev){
+				var e=ev||window.event;
+				
+				console.log(e.clientX);
+			    console.log(e.clientY);
+			    
+			    var a=e.clientX;
+				var b=e.clientY;
+				
+				oImg.style.marginLeft = -(a*3)+"px";
+				oImg.style.marginTop= -(b*3)+"px";
+			}
+		}
+		
+	</script>
+<ml>

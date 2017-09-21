@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>aboutxiaoniao</title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.box{
+				background: darkgrey;
+				overflow: hidden;
+				position: relative;
+			}
+			.wrap{
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: all 1s;
+			}
+			.kid{
+				background: gray;
+				text-align: center;
+				color: white;
+				font-size: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="wrap">
+				<div class="kid">1</div>
+				<div class="kid">2</div>
+				<div class="kid">3</div>
+				<div class="kid">4</div>
+				<div class="kid">5</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		//获取元素
+		var oBox=document.querySelector(".box");
+		var oWrap=document.querySelector(".wrap");
+		var oKid=document.querySelectorAll(".kid");
+		
+		var _width=window.innerWidth;
+		console.log(_width);
+		var _height=window.innerHeight;
+		console.log(_height);
+		
+		oBox.style.width=_width+"px";
+		oBox.style.height=_height+"px";
+		
+		for(var i=0;i<oKid.length;i++){
+			oKid[i].style.width=_width+"px";
+			oKid[i].style.height=_height+"px";
+			oKid[i].style.lineHeight=_height+"px";	
+		}
+		
+		var ff=navigator.userAgent.indexOf("Firefox");
+		
+		
+		// 判断浏览器类型
+		if (ff!=-1) {
+			// 为box添加滚轮事件
+			oBox.addEventListener('DOMMouseScroll',wheel,false);
+		}else{
+			oBox.onmousewheel=wheel;
+		}
+		var num=0;
+		function wheel(event){
+		 	var event=event||window.event;
+		 	var down=true;//用来判断是不是向下滚动
+		 	
+		 	
+		 	
+		 	// 判断滚轮方向
+		 	if (event.detail) {
+		 		// 火狐浏览器的事件
+		 		if (event.detail>0) {
+		 			down=true;
+		 			 console.log("向后/向下滚动");
+		 		}else{
+		 			down=false;
+		 			 console.log("向前/向上滚动");
+		 		}
+		 	}else{
+		 		// 其他浏览器的事件
+		 		if (event.wheelDelta>0) {
+		 			down=false;
+		 			console.log("向前/向上滚动");
+		 			num--;
+		 			if(num<0){
+		 				num=0;
+		 			}
+		 			oWrap.style.top=_height*num+"px";
+		 			
+		 		}else{
+		 			down=true;
+		 			console.log("向后/向下滚动");
+		 			num++;
+		 			
+		 			if(num>4){
+		 				num=4;
+		 			}
+		 			console.log(num);
+		 			oWrap.style.top=-_height*num+"px";	
+		 		}
+		 	}
+		 	console.log(down);
+		 }
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

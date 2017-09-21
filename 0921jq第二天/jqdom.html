@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+	<script type="text/javascript">
+		
+		var oUl=$("<ul></ul>");
+//		console.log(oUl);
+		
+		
+		//将元素插入到某一个节点的里面
+		//插入的是父子关系
+		$("body").append(oUl);
+		
+		var oLi=$("<li>1</li>");
+		oUl.append(oLi);
+		
+		
+		//插入前面
+		var oLi1=$("<li>0</li>");
+		oUl.prepend(oLi1);
+		
+		
+		//after插入谁后面跟谁是兄弟关系
+		oLi1.after("<mark>黄色</mark>");
+		
+		//before
+//		oLi1.before("<mark>红红的</mark>");
+		
+		
+//		oLi.replaceWith("<b>我替换了li</b>")
+		
+//		$("<b>我替换了li</b>").replaceAll("li");
+		
+		
+//		删除所有子节点
+//		oUl.empty();
+		
+		
+		//自己调用删除自己
+		oLi1.remove();
+		
+		oLi.on("click",function(){
+			var oLI=oLi.clone(true);
+			console.log(oLI);
+			
+			oUl.append(oLI);
+		})
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

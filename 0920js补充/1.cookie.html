@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cookie</title>
+</head>
+<body>
+	
+</body>
+	<script>
+		// 查询cookie类型
+		var cookie=document.cookie;
+//		console.log(cookie);//字符串
+//
+//		// 存储cookie
+		 document.cookie="username=Henry";
+//		 document.cookie="password=359862";
+//		 document.cookie="age=32";
+//		 document.cookie="sex=男";
+//		 访问cookie
+//		console.log(document.cookie);
+//		alert(cookie);
+
+
+		// 封装存储cookie的函数
+		function setCookie(key,value,day){
+			// 获取当前时间
+			var date=new Date();
+			// 返回日期中具体的某一天
+			var nowDate=date.getDate();
+			// 计算过期的时间
+			date.setDate(nowDate+day);
+			document.cookie=key+"="+value+";expires="+date;
+		}
+		setCookie("name2","蒋昌旭","");
+		setCookie("name","Mogolia",5);
+		setCookie("name1","inner-Mogolia",10);
+
+//		// 封装获取cookie的函数 name=Mogolia;name1=inner-....;...
+//		function getCookie(key){
+//			// 通过分号和空格将字符串解析成数组
+//			var arr=document.cookie.split("; ");
+////			console.log(arr);
+//			// 循环获取需要的cookie值
+//			for(var i=0;i<arr.length;i++){
+//				//通过等号,将数组再次解析
+//				var arr2=arr[i].split("=");
+//				console.log(arr2);
+//				// 判断,通过下标获取对应的key,如果与传进来的key相同,那么返回
+//				if (arr2[0]==key) {
+//					return arr2[1];
+//				}
+//			}
+//		}
+//		console.log(getCookie("tt"));
+
+
+		// 删除cookie
+//		function removeCookie(key){
+//			setCookie(key,"",-1);
+//		}
+//		// 调用删除cookie
+//		removeCookie("tt");
+		/*
+			cookie:存储数据,当用户访问某个网站的时候,就可以通过cookie的存储方式,将数据存储在用户的电脑上
+
+			1.不同的浏览器存放cookie的位置不一样,所以cookie不能通用。
+
+			2.cookie的存储是以域名的形式进行区分的。
+
+			3.一个域名存放cookie的个数是有限制的，不同浏览器存放的个数不同。
+
+			4.每个cookie存放的内容也是有限制的,不同的浏览器存放的内容大小也是不一样的。
+
+			5.cookie的默认存储生命周期是在整个浏览器关闭之前。
+		*/ 
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

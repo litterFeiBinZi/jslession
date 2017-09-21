@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var cookie=document.cookie;
+		document.cookie="aaa="+1234;
+		console.log(cookie);
+		function getCookie(key){
+			// 通过分号和空格将字符串解析成数组
+			var arr=document.cookie.split("; ");
+			// 循环获取需要的cookie值
+			for(var i=0;i<arr.length;i++){
+				//通过等号,将数组再次解析
+				var arr2=arr[i].split("=");
+				// 判断,通过下标获取对应的key,如果与传进来的key相同,那么返回
+				if (arr2[0]==key) {
+					return arr2[1];
+				}
+			}
+		}
+		console.log(getCookie("aaa"));
+	</script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background: yellowgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+	<script type="text/javascript">
+		// 动画
+		// animate({param},speed,callback);
+		// 第一个参数:必须的,改变的元素
+		// 第二个参数:可选参数,'slow','fast',毫秒数
+		// 第三个参数:可选参数,动画执行完毕之后执行的回调函数
+		
+		
+		$("div").click(function(){
+			$("div").animate({width:1000},2000,function(){
+				$("div").animate({width:100},2000);
+			});
+		})
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		$('button').on('click',function(){
+			$('div').animate({width:600},3000,function(){
+				$('div').css({width:300});
+			});
+		});
+		
+		// 动画的队列功能
+		// $('button').click(function(){
+		// 	$('div').animate({left:300,top:300});
+		// 	$('div').animate({left:600,top:600});
+		// 	$('div').animate({left:0,top:20});
+		// });
+	</script>
+</html>

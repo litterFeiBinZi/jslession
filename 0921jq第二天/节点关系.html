@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>节点关系</title>
+	</head>
+	<body>
+		<ul>
+			<li class="io">1</li>
+			<li >2</li>
+			<li>3</li>
+			<li>4</li>
+			<li class="i">5</li>
+		</ul>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+	<script type="text/javascript">
+		
+		//children() 取得子节点
+//		$("ul").children().eq(1).css("background","red");
+		
+//		$("ul").children(".i").css("background","red");
+		
+		
+//		find()查找
+//		$("ul").find(".io").css("background","red");
+		
+		//next() 兄弟中紧邻的下一个元素
+//		$(".io").next().css("background","red");
+		
+		//nextAll() 兄弟中这个之后的所有的元素
+//		$(".io").nextAll().css("background","red");
+		
+		
+		//nextUntil()  查找io之后，i之前的所有兄弟元素
+//		$(".io").nextUntil(".i").css("background","red");
+		
+		
+		//parent()  查找父节点
+//		$(".io").parent().css("background","yellow");
+		
+		//parents() 查找到祖先元素不包含根元素
+//		$(".io").parents().css("background","yellow");
+		
+		
+		//prev() 相邻兄弟上一个
+		
+		$(".i").prev().css("background","yellow");
+		
+		$(".i").prevAll().css("background","yellow");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

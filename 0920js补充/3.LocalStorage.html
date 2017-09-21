@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LocalStotrage</title>
+</head>
+<body>
+	
+</body>
+	<script>
+		// 通过判断来确定当前浏览器是否支持local & session存储
+		if (!window.localStorage) {
+			alert("Your Browse Dose Not Support localStorage");
+			alert("您的浏览器不支持本地存储方法。");
+		}
+
+		// 设置本地存储的方法
+		window.localStorage.user="admin";
+		window.localStorage["password"]="123456";
+
+	   							  // key  value
+		window.localStorage.setItem("age","30");
+
+		// 获取本地存储的内容
+
+		console.log(window.localStorage.user);//admin
+		console.log(window.localStorage.password);//123456
+		console.log(window.localStorage.getItem("age"));
+
+		// 清除方法
+//		window.localStorage.removeItem("user");
+//		console.log(window.localStorage.user);
+
+		// 清除所有本地数据
+//		window.localStorage.clear();
+
+
+
+		// sessionStorage
+//		window.sessionStorage.user="admin";
+//		console.log(window.sessionStorage.user);
+
+
+
+
+
+
+
+		/*
+			localStorage 本地存储 5M 主流浏览器兼容
+			sessionStorage 回话存储 5M 主流浏览器兼容
+			两者在方法上,没有任何的区别,但是存储时间上有区别.
+
+			localStorage:永远存在,除非人为手动清除.
+			sessionStorage: 随着当前页面存在,关闭页面时就会销毁
+		*/ 
+	</script>
+</html>

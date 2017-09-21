@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+	        body {
+	            border:20px solid #CCC;
+	            margin:10px;
+	            padding:40px;
+	            background:#EEE;
+	        }
+	        #test {
+	            width:400px;
+	            height:200px;
+	            padding:20px;
+	            background:#F60;
+	            border:5px solid #888;
+	        }
+	    </style>
+	</head>
+	<body>
+    	<div id="test"></div>
+	</body>
+	<script>
+        var test = document.getElementById("test");
+        test.innerHTML = "<p>Browser:" + navigator.userAgent + "</p>" +
+            "<p>offsetWidth:" + test.offsetWidth + "</p>" +
+            "<p>offsetHeight:"+test.offsetHeight+"</p>"+
+            "<p>offsetLeft:"+test.offsetLeft+"</p>"+
+            "<p>offsetTop:"+test.offsetTop+"</p>"+
+            "<p>scrollLeft:"+test.scrollLeft+"</p>"+
+            "<p>scrollTop:"+test.scrollTop+"</p>";
+            
+            
+            /*
+             1.offsetTop     :
+				当前对象到其上级层顶部的距离.
+				不能对其进行赋值.设置对象到页面顶部的距离请用style.top属性.
+			2.offsetLeft    :
+				当前对象到其上级层左边的距离.
+				不能对其进行赋值.设置对象到页面左部的距离请用style.left属性.
+			3.offsetWidth   :
+				当前对象的宽度.
+				与style.width属性的区别在于:如对象的宽度设定值为百分比宽度,则无论页面变大还是变小,style.width都返回此百分比,而offsetWidth则返回在不同页面中对象的宽度值而不是百分比值
+			4.offsetHeight :
+				与style.height属性的区别在于:如对象的宽度设定值为百分比高度,则无论页面变大还是变小,style.height都返回此百分比,而offsetHeight则返回在不同页面中对象的高度值而不是百分比值
+			5.offsetParent  :
+				当前对象的上级层对象.
+				注意.如果对象是包括在一个DIV中时,此DIV不会被当做是此对象的上级层,(即对象的上级层会跳过DIV对象)上级层是Table时则不会有问题.
+				利用这个属性，可以得到当前对象在不同大小的页面中的绝对位置．
+			6.scrollLeft    :
+				对象的最左边到对象在当前窗口显示的范围内的左边的距离．
+				即是在出现了横向滚动条的情况下，滚动条拉动的距离．
+			7.scrollTop
+				对象的最顶部到对象在当前窗口显示的范围内的顶边的距离．
+				即是在出现了纵向滚动条的情况下，滚动条拉动的距离．
+            */
+    </script>
+</html>

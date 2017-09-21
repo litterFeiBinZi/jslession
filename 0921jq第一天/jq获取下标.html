@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li class="li1">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+	<script type="text/javascript">
+	
+	
+		$("ul li").click(function(){
+			var num=$(this).index();
+			
+			$("ul li").eq(num).css("background","yellow").siblings().css("background","white");
+		})
+		
+//		eq(),里面放的是下标,获取第几个下标对应的元素
+//		var lin=$("ul li").eq(1);
+//		console.log(lin);
+		
+		
+//		siblings(),取出兄弟节点
+//		var bor=$(".li1").siblings();
+//		console.log(bor);
+//		
+		
+		
+		
+		
+	</script>
+</html>

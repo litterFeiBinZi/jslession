@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>滚轮事件</title>
+	<style>
+		*{margin:0;padding:0;}
+		#box{
+			width: 400px;
+			height: 380px;
+			padding-top: 20px;
+			margin: 20px auto 0;
+			border: 2px solid #ccc;
+			text-indent: 1rem;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<p>我喜欢的话。</p><br>
+		<p>我更喜欢的话</p><br>
+		<p>滑动滚轮</p>
+	</div>
+</body>
+	<script>
+		/*
+			滚轮事件(分两个阵容)
+				1.第一阵营:IE Chrome Safari等浏览器通过onmousewheel添加
+				2.第二阵营:Firefox浏览器通过DOMMouseScroll添加,且必须用过监听者添加
+
+			判断上下滚动的属性也不一样
+				Firefox使用detail属性进行判断,如果大于0表示向下滚动,否则取反
+				其他浏览器使用wheelDelta判断,如果大于0,表示向上滚动,否则取反
+
+			注意:以上两个判断滚动的值,随系统设置而定
+		*/ 
+
+		// 获取元素
+		var box=document.getElementById('box');
+		// 获取是不是ff浏览器
+		var ff=navigator.userAgent.indexOf("Firefox");
+
+		// 判断浏览器类型
+		if (ff!=-1) {
+			// 为box添加滚轮事件
+			box.addEventListener('DOMMouseScroll',wheel,false);
+		}else{
+			box.onmousewheel=wheel;
+		}
+		// 事件方法
+//		 function wheel(event){
+//		 	var event=event||window.event;
+//		 	var down=true;//用来判断是不是向下滚动
+//		 	// 判断滚轮方向
+//		 	if (event.detail) {
+//		 		// 火狐浏览器的事件
+//		 		if (event.detail>0) {
+//		 			down=true;
+//		 			 console.log("向后/向下滚动");
+//		 		}else{
+//		 			down=false;
+//		 			 console.log("向前/向上滚动");
+//		 		}
+//		 	}else{
+//		 		// 其他浏览器的事件
+//		 		if (event.wheelDelta>0) {
+//		 			down=false;
+//		 			 console.log("向前/向上滚动");
+//		 		}else{
+//		 			down=true;
+//		 			 console.log("向后/向下滚动");
+//		 		}
+//		 	}
+//		 	console.log(down);
+//		 }
+		// 简化上一段函数代码
+		function wheel(event){
+			var event=event||window.event;
+			var down=true;
+			if (event.detail) {
+				down=event.detail>0;
+			}else{
+				down=event.wheelDelta<0;
+			}
+			console.log(down);
+		}
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

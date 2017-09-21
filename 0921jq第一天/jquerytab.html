@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;list-style: none;}
+			ul{
+				 position: relative;
+			}
+			li{
+				width: 100px;
+				height: 100px;
+				background: yellowgreen;
+				text-align: center;
+				line-height: 100px;
+				 color:white;
+				
+			}
+			div{
+				width: 600px;
+				height: 600px;
+				background: lightskyblue;
+				position: absolute;
+				top: 0;
+				left: 100px;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<div></div>
+		</ul>
+		
+	</body>
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+	<script type="text/javascript">
+		$("ul li").on("mouseover",function(){
+			var num=$(this).index();
+			console.log(num);
+			$("div").show(1000).html(num+1);
+			
+			$(this).mouseout(function(){
+				$("div").hide(1000);
+			})
+			
+		});
+	</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</html>

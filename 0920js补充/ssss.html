@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+			ul{
+				list-style-type: none;
+				overflow: hidden;
+			}
+			li{
+				width:200px;
+				height:300px;
+				margin-left:50px;
+				float:left;
+				margin-top:50px;
+				padding:4px;
+				border:2px solid transpra;
+			}
+			li:hover{
+				/*padding-color:red;*/
+				border-color: red;
+			}
+			img{
+				width:100%;
+				height:200px;
+			}
+			a{
+				color: black;
+			}
+			a:hover{
+				color: red;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<ul>
+
+		</ul>
+	</body>
+	<script type="text/javascript" src="jquery-3.0.0.min.js"></script>
+	<!-- <script type="text/javascript" src="cookie.js"></script> -->
+	<script type="text/javascript">
+		$.ajax({
+		   type: "POST",
+		   url: "http://datainfo.duapp.com/shopdata/getGoods.php",
+		   dataType: "jsonp",
+		   success: function(msg){
+			   	for (var i = 0; i < msg.length; i++) {
+			   		addli();
+			   		console.log(msg);
+
+
+			   	}
+
+			   	function addli() {
+			   		var $oli=$("<li>"+
+			   			"<img src="+msg[i].goodsListImg+">"+
+			   			"<p style="+"color:red;"+">价格：￥"+msg[i].price+"</p>"+
+
+			   			"<a class='aa'>"+msg[i][2]+"</a>"+
+			   			"</li>");
+			   		$("ul").append($oli);
+			   	} 
+
+			   	$("li").mouseover(function() {
+					$(this).css("paddingColor","red");
+				});
+				$("li").mouseout(function() {
+					$(this).css("paddingColor","");
+				});
+
+				var cookie=document.cookie;
+				// 删除cookie
+				function removeCookie(key){
+					setCookie(key,"",-1);
+				}
+				function setCookie (key,value,day) {
+					var date=new Date();
+					var nowDate=date.getDate();
+					date.setDate(nowDate+day);
+					document.cookie=key+"="+value+";expires="+date;	
+				}
+				
+	 			$("li").click(function(){
+					var	dex=$("li").index(this);
+					console.log(dex);
+					removeCookie("name");
+					setCookie("name",dex,7);
+
+				})
+
+		   }
+		});
+		
+		
+	</script>
+	</html>	

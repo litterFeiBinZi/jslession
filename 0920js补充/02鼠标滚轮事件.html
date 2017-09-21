@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>鼠标滚轮</title>
+
+
+<script>
+
+ 
+window.onload = function(){
+	
+	//鼠标滚动事件绑定及检测
+	var mainSlideIndex = 0;
+	var mainSlideGoing = false;
+	var mainSlideDelay = 0;
+	var mainSlideTimer =  null;
+	var scrollFunc = function (ev) {  
+        ev = ev || window.event;  
+        if (ev.wheelDelta) {  //判断浏览器IE，谷歌滑轮事件               
+            if (ev.wheelDelta > 0) { //当滑轮向上滚动时  
+                alert("滑轮向上滚动"); 
+            }  
+            if (ev.wheelDelta < 0) { //当滑轮向下滚动时  
+                alert("滑轮向下滚动 ie chrom");
+            }  
+        } else if (ev.detail) {  //Firefox滑轮事件  
+            if (ev.detail> 0) { //当滑轮向下滚动时  
+                alert("滑轮向下滚动")
+            }  
+            if (ev.detail< 0) { //当滑轮向上滚动时  
+                alert("滑轮向上滚动");
+            }  
+        }  
+    }  
+    //给页面绑定滑轮滚动事件  
+    if (document.addEventListener) {//firefox  
+        document.addEventListener('DOMMouseScroll', scrollFunc, false);  
+    }  
+    //滚动滑轮触发scrollFunc方法  //ie 谷歌  
+    window.onmousewheel = document.onmousewheel = scrollFunc; 
+	
+	
+}
+
+
+</script>
+
+</head>
+
+<body>
+	<div id="content" style="height:2000px"></div>
+</body>
+
+
+</html>

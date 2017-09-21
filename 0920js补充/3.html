@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" />
+	</body>
+	<script type="text/javascript">
+		var oInp=document.querySelector("input");
+		
+		oInp.onblur=function(){
+			var str=this.value;
+			
+			var cookie=document.cookie;
+			
+			document.cookie="str="+str;
+			
+				
+		}
+	</script>
+</html>

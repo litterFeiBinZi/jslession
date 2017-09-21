@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cookie登录</title>
+</head>
+<body>
+	<input type="text" id="username">
+	<input type="button" value="登录" id="login">
+	<input type="button" value="删除" id="del">
+</body>
+	<script>
+		// 获取元素
+		var oUsername=document.getElementById("username");
+		var oLogin=document.getElementById("login");
+		var oDel=document.getElementById("del");
+
+		oLogin.onclick=function(){
+			alert("登录成功");
+			// 存储用户名到cookie中
+			setCookie("username",oUsername.value,3);
+		}
+		if (getCookie("username")) {
+			oUsername.value=getCookie("username");
+		}
+
+		oDel.onclick=function(){
+			removeCookie("username");
+			oUsername.value="";
+		}
+
+		// 封装设置cookie
+		function setCookie(key,value,day){
+			// 获取当前时间
+			var date=new Date();
+			// 当月某一天
+			var nowDate=date.getDate();
+			// 计算过期的时间
+			date.setDate(nowDate+day);
+			// name=Henry;expires=day;
+			document.cookie=key+"="+value+";expires="+date;
+		}
+
+		// 封装获取cookie
+		function getCookie(key){
+			var arr=document.cookie.split("; ");
+			for(var i=0;i<arr.length;i++){
+				var arr2=arr[i].split("=");
+				if (arr2[0]==key) {
+					return arr2[1];
+				}
+			}
+		}
+		// 封装移出cookie
+		function removeCookie(key){
+			setCookie(key,"",-1);
+		}
+	</script>
+</html>

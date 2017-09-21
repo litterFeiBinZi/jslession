@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div,section{
+				
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li id="li2" class="li1">3</li>
+			<li class="li1" id="li3">4</li>
+			<li>5</li>
+		</ul>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+	<script type="text/javascript">
+//		用$来获取元素,.css("属性","属性值");
+//		链式结构
+//		$("div").css("background","aqua").css("color","red");
+
+//		$("div").css({
+//			background:"red",
+//			color:"white",
+//			width:100,
+//			height:100,
+//			fontSize:50
+//		});
+		
+		
+//		$(".u").css("background","red");
+//		
+//		$("#id").css()
+		
+		// (1)通配符选择器 * 优先级最低
+//		$('*').css('color','red');
+//
+//		// (2)类选择器  .
+//		$('.p1').css('color','red');
+//
+//		// (3)id选择器 #
+//		$('#list').css('fontSize','30px');
+//		$('#list').css('listStyle','none');
+
+		// (4)群组选择器 ,
+//		$('.div1,.p1').css('background','green');
+
+		// (5)子代选择器 (儿子)
+//		$('#list>li').css('color','red');
+//		$('li>p').css('color','green');
+
+		// (6)后代选择器
+//		$('#list li').css('color','red');
+
+		// (7)获取第一个元素 first
+//		$('#list li:first').css('color','red');
+
+		// (8)获取最后一个元素 last
+//		$('#list li:last').css('color','red');
+
+		// (9)获取下标为偶数 even
+//		$('#list li:even').css('color','red');
+
+		// (10)获取下标为奇数 odd
+//		$('#list li:odd').css('color','red');
+
+		// (11)获取指定下标的元素 eq
+//		$('#list li:eq(0)').css('color','red');
+
+		// (12)获取下标大于指定数值的元素 gt
+//		$('#list li:gt(1)').css('color','red');
+
+		// (13)获取下标小于指定数值的元素 lt
+//		$('#list li:lt(2)').css('color','red');
+
+		// (14)去除指定元素 not
+//		$('ul li:not(#li1)').css('color','red');
+
+		// (15)选取拥有此属性的元素
+//		$('ul li[id]').css('color','red');
+
+		// (16)选取属性的值为value的元素 [attr=value]
+//		$('ul li[class=li1]').css('color','red');
+
+		// (17)选取属性的值不等于value的元素 [attr!=value]
+//		$('ul li[class!=li1]').css('color','red');
+
+		// (18)选取属性的值以value开始的元素 [attr^=value]
+//		$('ul li[class^=li1]').css('color','red');
+
+		// (19)选取属性的值以value结束的元素 [attr$=value]
+//		$('div[id$=div3]').css('color','red');
+
+		// (20)选取属性的值含有value的元素 [attr*=value]
+//		$('ul li[class*=li1]').css('color','red');
+
+
+		// (21)获取第一个子元素 first-child
+//		$('ul li:first-child').css('color','red');
+
+		// (22)获取最后一个子元素 last-child
+//		$('#list li:last-child').css('color','red');
+
+		// (23)获取第n个子元素 nth-child(n) 注意:下标从1开始
+//		$('ul li:nth-child(2)').css('color','red');
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

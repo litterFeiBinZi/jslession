@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script type="text/javascript">
+		
+		
+		function go(){
+			var xhr=null;
+			
+			try{
+				xhr=new XMLHttpRequest();
+			}catch(e){
+				xhr=new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			
+			xhr.open("GET","http://datainfo.duapp.com/shopdata/getGoods.php",true);
+			xhr.send();
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4){
+					if(xhr.status==200){
+						var data=xhr.responseText;
+//						data=JSON.parse(data);
+						document.write(data);
+					}
+				}
+			}
+			
+			
+		}
+		
+		go();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>
